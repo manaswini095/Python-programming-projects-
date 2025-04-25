@@ -1,0 +1,38 @@
+Project Work 2
+# Word Counter Program
+# Python Programming Internship - Project 2
+# ---------------------------------------------
+
+def count_words(text):
+    """
+    Count the number of words in the given text.
+    A word is defined as a sequence of characters separated by whitespace.
+    """
+    # Strip leading/trailing whitespace and split by whitespace
+    words = text.strip().split()
+    return len(words)
+
+def main():
+    # Introduction message
+    print("===================================")
+    print("       Word Counter Program        ")
+    print("===================================\n")
+    print("This program will count the number of words in your input.\n")
+
+    # Get user input
+    user_input = input("Enter a sentence or paragraph:\n> ")
+
+    # Check for empty input
+    if not user_input.strip():
+        print("\n⚠️ Error: No input provided. Please enter a valid sentence or paragraph.")
+        return
+
+    # Call the word counting function
+    result = count_words(user_input)
+
+    # Display the result
+    print(f"\n✅ Your input contains {result} word(s).")
+
+# Entry point of the program
+if __name__ == "__main__":
+    main()
